@@ -1,15 +1,13 @@
-import React, { useState } from "react";
-import {
-  Navbar,
-  Nav,
-  Container,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Navbar, Nav, Container, NavDropdown, Spinner } from "react-bootstrap";
 import movie from "./movie.svg";
+import SearchBar from "./SearchBar";
+import BlockLoading from "react-loadingg/lib/BlockLoading";
 export default function Navbarr() {
+  const [loading, setLoading] = useState(false);
+  const onSearch = (bool) => {
+    setLoading(bool);
+  };
   return (
     <>
       <Navbar collapseOnSelect expand="lg" variant="dark" id="navbar">
@@ -41,17 +39,8 @@ export default function Navbarr() {
               </NavDropdown>
             </Nav>
 
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Grab some 🍿"
-                className="me-2 Cursor"
-                aria-label="Search"
-              />
-              <Button variant="outline-info" id="SearchButton" type="submit">
-                Search
-              </Button>
-            </Form>
+            {loading && <BlockLoading color="#0dcaf0" id="Spinner" />}
+            <SearchBar onSearch={onSearch} />
           </Navbar.Collapse>
         </Container>
       </Navbar>
