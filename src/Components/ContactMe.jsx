@@ -1,21 +1,20 @@
 import React from "react";
 import emailjs from "emailjs-com";
 import { Button, Form } from "react-bootstrap";
+
 export default function ContactUs() {
   const id = process.env.REACT_APP_ID;
   function sendEmail(e) {
     e.preventDefault();
-    emailjs
-      .sendForm("service_aveq8sx", "template_ynhsr8e", e.target, `user_${id}`)
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-          console.log(process.env.REACT_APP_ID);
-        }
-      );
+    emailjs.sendForm("service_aveq8sx", "template_ynhsr8e", e.target, id).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+        console.log(process.env.REACT_APP_ID);
+      }
+    );
     e.target.reset();
   }
 
