@@ -24,3 +24,20 @@
   margin-right: 20px;
   position: inherit;
 }
+
+.Footer {
+  position: bottom;
+  width: 100%;
+  height: 2.5rem;
+  text-align: center;
+}
+#card,
+#cardHeader,
+#cardBody {
+  background-color: #1f2833;
+}
+
+#cardBody {
+  display: flex;
+  justify-content: space-evenly;
+}

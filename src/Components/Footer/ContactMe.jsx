@@ -19,7 +19,7 @@ export default function ContactUs() {
   }
 
   return (
-    <Form onSubmit={sendEmail} id="contactForm">
+    <Form onSubmit={sendEmail}>
       <Form.Group className="mb-3">
         <Form.Label>Name</Form.Label>
         <Form.Control type="input" placeholder="Name" name="from_name" />
@@ -32,7 +32,7 @@ export default function ContactUs() {
         <Form.Label>Message</Form.Label>
         <Form.Control
           as="textarea"
-          rows={3}
+          rows={2}
           placeholder="Message"
           name="message"
         />
