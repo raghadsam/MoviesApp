@@ -4,9 +4,12 @@ import Main from "./Components/Main";
 import Navbarr from "./Components/Navbar";
 
 function App() {
+  const handleQuery = (query) => {
+    console.log(query);
+  };
   return (
     <div className="App">
-      <Navbarr />
+      <Navbarr handleQuery={handleQuery} />
       <Main />
       <Footer />
     </div>

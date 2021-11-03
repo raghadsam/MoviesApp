@@ -6,6 +6,7 @@ export default function SearchBar(props) {
     e.preventDefault();
     console.log(input);
     props.onSearch(false);
+    props.handleQuery(input);
   };
   const handleChange = (e) => {
     setInput(e.target.value);

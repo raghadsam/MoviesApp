@@ -3,7 +3,7 @@ import { Navbar, Nav, Container, NavDropdown, Spinner } from "react-bootstrap";
 import movie from "./movie.svg";
 import SearchBar from "./SearchBar";
 import BlockLoading from "react-loadingg/lib/BlockLoading";
-export default function Navbarr() {
+export default function Navbarr(props) {
   const [loading, setLoading] = useState(false);
   const onSearch = (bool) => {
     setLoading(bool);
@@ -40,7 +40,7 @@ export default function Navbarr() {
             </Nav>
 
             {loading && <BlockLoading color="#0dcaf0" id="Spinner" />}
-            <SearchBar onSearch={onSearch} />
+            <SearchBar onSearch={onSearch} handleQuery={props.handleQuery} />
           </Navbar.Collapse>
         </Container>
       </Navbar>
