@@ -40,7 +40,11 @@ export default function Navbarr(props) {
             </Nav>
 
             {loading && <BlockLoading color="#0dcaf0" id="Spinner" />}
-            <SearchBar onSearch={onSearch} handleQuery={props.handleQuery} />
+            <SearchBar
+              onSearch={onSearch}
+              handleQuery={props.handleQuery}
+              handleMovies={props.handleMovies}
+            />
           </Navbar.Collapse>
         </Container>
       </Navbar>

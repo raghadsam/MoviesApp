@@ -7,6 +7,7 @@ export default function SearchBar(props) {
     console.log(input);
     props.onSearch(false);
     props.handleQuery(input);
+    props.handleMovies(input, "search/movie");
   };
   const handleChange = (e) => {
     setInput(e.target.value);
