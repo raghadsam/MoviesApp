@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container, NavDropdown, Spinner } from "react-bootstrap";
 import movie from "./movie.svg";
 import SearchBar from "./SearchBar";
+import Dropdown from "./Dropdown";
 import BlockLoading from "react-loadingg/lib/BlockLoading";
 export default function Navbarr(props) {
   const [loading, setLoading] = useState(false);
@@ -17,29 +18,10 @@ export default function Navbarr(props) {
           <Navbar.Brand href="#home">Movies App</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#features" id="navbarElements">
-                Features
-              </Nav.Link>
-              <Nav.Link href="#pricing" id="navbarElements">
-                Pricing
-              </Nav.Link>
-              <NavDropdown title="Dropdown" id="navbarElements">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
+            <Nav className="me-auto"></Nav>
 
             {loading && <BlockLoading color="#0dcaf0" id="Spinner" />}
+            <Dropdown />
             <SearchBar
               onSearch={onSearch}
               handleQuery={props.handleQuery}

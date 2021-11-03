@@ -4,8 +4,8 @@ import MovieItem from "./MovieItem";
 export default function MoviesGrid(props) {
   return (
     <div>
-      {props.movies.map(() => (
-        <MovieItem />
+      {props.movies.map((movie) => (
+        <MovieItem key={movie.id} />
       ))}
     </div>
   );

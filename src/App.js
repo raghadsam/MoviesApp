@@ -1,19 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Footer from "./Components/Footer/Footer";
 import Main from "./Components/Main";
 import Navbarr from "./Components/Navbar";
 
 const TMDB_BASE_URL = "https://api.themoviedb.org/3";
-const path = "search/movie";
 export const constructUrl = (query, path) => {
   return `${TMDB_BASE_URL}/${path}?api_key=${atob(
     "ZDJmYTdhZDFlMjZhZjA4NDdkMzQ5ZDdkYmQ1ZjkzZTU="
   )}&query=${query}`;
 };
-
+// const path = "search/movie";
+//const genre="genre/movie/list"
 function App() {
   const [movies, setMovies] = useState([]);
+
   const handleQuery = (query) => {
     console.log(query);
   };
@@ -30,6 +31,7 @@ function App() {
         console.log(err);
       });
   };
+
   return (
     <div className="App">
       <Navbarr handleQuery={handleQuery} handleMovies={handleMovies} />
