@@ -24,6 +24,8 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         setMovies(data.results);
+        console.log(movies);
+        console.log(data.results);
       })
       .catch((err) => {
         console.log(err);
