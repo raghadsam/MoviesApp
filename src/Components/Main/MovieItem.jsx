@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Col } from "react-bootstrap";
 export default function MovieItem(props) {
   const IMG_API = "https://image.tmdb.org/t/p/w1280";
   return (
