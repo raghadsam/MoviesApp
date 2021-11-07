@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Footer from "./Components/Footer/Footer";
-import Main from "./Components/Main";
-import Navbarr from "./Components/Navbar";
+import Main from "./Components/Main/Main";
+import Navbarr from "./Components/Navbar/Navbar";
 
 const TMDB_BASE_URL = "https://api.themoviedb.org/3";
 export const constructUrl = (query, path) => {

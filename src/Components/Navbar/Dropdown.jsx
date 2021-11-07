@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavDropdown } from "react-bootstrap";
-import { constructUrl } from "../App";
+import { constructUrl } from "../../App";
 export default function Dropdown() {
   const [genres, setGenres] = useState([]);
 
