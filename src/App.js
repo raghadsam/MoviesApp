@@ -23,8 +23,6 @@ function App() {
     fetch(constructUrl(query, path))
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        console.log(path);
         setMovies(data.results);
       })
       .catch((err) => {
